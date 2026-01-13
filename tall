@@ -1,0 +1,82 @@
+[33mcommit f38c46cc7801896aa8b32258b000a99b88fc6a97[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Cristhofer Pastorio <cristhofer.pb@hotmail.com>
+Date:   Tue Jan 13 01:16:05 2026 -0300
+
+    Initial commit - portfolio ready
+
+ .gitignore           |  2 [32m++[m
+ components/Footer.js | 23 [32m++++++++++++++++[m[31m-------[m
+ components/Navbar.js | 14 [32m+++++++++[m[31m-----[m
+ pages/contact.js     | 15 [32m++++++++++[m[31m-----[m
+ 4 files changed, 37 insertions(+), 17 deletions(-)
+
+[33mcommit 3ca13b20bd136080a3897d016a8f619855d477bb[m
+Author: Cristhofer Pastório <cristhofer.pb@hotmail.com>
+Date:   Tue Jan 13 01:01:56 2026 -0300
+
+    Update Next.js and dependencies for security
+
+ package-lock.json | 735 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m--------------[m
+ package.json      |   2 [32m+[m[31m-[m
+ 2 files changed, 618 insertions(+), 119 deletions(-)
+
+[33mcommit 782939624a892e7c11bb2fa2143aa772f9dd6baa[m
+Author: Cristhofer Pastório <cristhofer.pb@hotmail.com>
+Date:   Tue Jan 13 00:53:49 2026 -0300
+
+    Initial commit - cleaned
+
+ .gitignore                                                          |   2 [32m+[m
+ components/Footer.js                                                |  72 [32m++++++[m
+ components/Navbar.js                                                | 107 [32m++++++++[m
+ components/ProjectCard.js                                           |  43 [32m++++[m
+ components/SEO.js                                                   |  44 [32m++++[m
+ components/ScrollToTop.js                                           |  56 [32m++++[m
+ components/VideoModal.js                                            |  66 [32m+++++[m
+ hooks/useReveal.js                                                  |  24 [32m++[m
+ lib/i18n-en.js                                                      |  34 [32m+++[m
+ lib/i18n-pt.js                                                      |  34 [32m+++[m
+ lib/projects-en.js                                                  | 112 [32m++++++++[m
+ lib/projects-pt.js                                                  | 111 [32m++++++++[m
+ package-lock.json                                                   | 435 [32m++++++++++++++++++++++++++++++++[m
+ package.json                                                        |  15 [32m++[m
+ pages/_app.js                                                       |  17 [32m++[m
+ pages/contact.js                                                    |  20 [32m++[m
+ pages/index.js                                                      |  98 [32m+++++++[m
+ pages/projects.js                                                   |  76 [32m++++++[m
+ portfolio-cristhofer.git/HEAD                                       |   1 [32m+[m
+ portfolio-cristhofer.git/config                                     |   8 [32m+[m
+ portfolio-cristhofer.git/description                                |   1 [32m+[m
+ portfolio-cristhofer.git/hooks/applypatch-msg.sample                |  15 [32m++[m
+ portfolio-cristhofer.git/hooks/commit-msg.sample                    |  24 [32m++[m
+ portfolio-cristhofer.git/hooks/fsmonitor-watchman.sample            | 174 [32m+++++++++++++[m
+ portfolio-cristhofer.git/hooks/post-update.sample                   |   8 [32m+[m
+ portfolio-cristhofer.git/hooks/pre-applypatch.sample                |  14 [32m+[m
+ portfolio-cristhofer.git/hooks/pre-commit.sample                    |  49 [32m++++[m
+ portfolio-cristhofer.git/hooks/pre-merge-commit.sample              |  13 [32m+[m
+ portfolio-cristhofer.git/hooks/pre-push.sample                      |  53 [32m++++[m
+ portfolio-cristhofer.git/hooks/pre-rebase.sample                    | 169 [32m+++++++++++++[m
+ portfolio-cristhofer.git/hooks/pre-receive.sample                   |  24 [32m++[m
+ portfolio-cristhofer.git/hooks/prepare-commit-msg.sample            |  42 [32m+++[m
+ portfolio-cristhofer.git/hooks/push-to-checkout.sample              |  78 [32m++++++[m
+ portfolio-cristhofer.git/hooks/sendemail-validate.sample            |  77 [32m++++++[m
+ portfolio-cristhofer.git/hooks/update.sample                        | 128 [32m++++++++++[m
+ portfolio-cristhofer.git/info/exclude                               |   6 [32m+[m
+ portfolio-cristhofer.git/info/refs                                  |   0
+ portfolio-cristhofer.git/objects/info/packs                         |   1 [32m+[m
+ portfolio-cristhofer.git/packed-refs                                |   1 [32m+[m
+ public/images/Cover.png:Zone.Identifier                             | Bin [31m0[m -> [32m25[m bytes
+ public/images/Landing Page Design - MILK SUPPLY.png:Zone.Identifier | Bin [31m0[m -> [32m25[m bytes
+ public/images/blog-realestate.png                                   | Bin [31m0[m -> [32m825893[m bytes
+ public/images/imoveis-cerutti.png                                   | Bin [31m0[m -> [32m1970178[m bytes
+ public/images/milk-supply.png                                       | Bin [31m0[m -> [32m1652094[m bytes
+ public/images/milk-supply_bkp.png                                   | Bin [31m0[m -> [32m770847[m bytes
+ public/images/pg 1.png:Zone.Identifier                              | Bin [31m0[m -> [32m25[m bytes
+ public/images/profile.jpg                                           | Bin [31m0[m -> [32m83676[m bytes
+ public/images/sigasoft-redesign.png                                 | Bin [31m0[m -> [32m251152[m bytes
+ styles/Footer.module.css                                            |  69 [32m+++++[m
+ styles/Hero.module.css                                              |  77 [32m++++++[m
+ styles/Navbar.module.css                                            | 100 [32m++++++++[m
+ styles/ProjectCard.module.css                                       |  94 [32m+++++++[m
+ styles/globals.css                                                  |  54 [32m++++[m
+ 53 files changed, 2646 insertions(+)
