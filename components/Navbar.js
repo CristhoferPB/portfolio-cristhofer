@@ -2,7 +2,11 @@ import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
 
-export default function Navbar({ t, lang, setLang }) {
+export default function Navbar({
+  t = { nav: { home: "Home", projects: "Projects" } },
+  lang = "en",
+  setLang = () => {}
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -16,10 +20,10 @@ export default function Navbar({ t, lang, setLang }) {
         {/* LINKS DESKTOP */}
         <div className={styles.links}>
           <Link href="/" className={styles.link}>
-            {t.nav.home}
+            {t.nav?.home || "Home"}
           </Link>
           <Link href="/projects" className={styles.link}>
-            {t.nav.projects}
+            {t.nav?.projects || "Projects"}
           </Link>
 
           {/* LANGUAGE SWITCH DESKTOP */}
@@ -70,7 +74,7 @@ export default function Navbar({ t, lang, setLang }) {
             className={styles.mobileLink}
             onClick={() => setOpen(false)}
           >
-            {t.nav.home}
+            {t.nav?.home || "Home"}
           </Link>
 
           <Link
@@ -78,7 +82,7 @@ export default function Navbar({ t, lang, setLang }) {
             className={styles.mobileLink}
             onClick={() => setOpen(false)}
           >
-            {t.nav.projects}
+            {t.nav?.projects || "Projects"}
           </Link>
 
           {/* LANGUAGE SWITCH MOBILE */}
