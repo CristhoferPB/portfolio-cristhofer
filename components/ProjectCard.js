@@ -12,7 +12,9 @@ export default function ProjectCard({
 }) {
   return (
     <div className={styles.card}>
-      <img src={image} alt={title} className={styles.image} />
+      <div className={styles.imageWrapper}>
+        <img src={image} alt={title} className={styles.image} />
+      </div>
 
       <h3 className={styles.title}>{title}</h3>
 
@@ -39,5 +41,6 @@ export default function ProjectCard({
         ▶ {buttonLabel}
       </button>
     </div>
+
   );
 }
