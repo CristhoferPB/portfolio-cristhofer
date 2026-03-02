@@ -55,8 +55,8 @@ export default function Projects({ t, lang, setLang }) {
             <ProjectCard
               key={index}
               {...project}
+              lang={lang}   // ✅ adicionar prop lang para ProjectCard
               resultsTitle={t.projects.resultsTitle}
-              buttonLabel={t.projects.buttonLabel}
               onOpenVideo={() => setSelectedVideo(project.video)}
             />
           ))}
